@@ -16,7 +16,7 @@ public class Employee {
     private Integer empCode;
     @Column(name = "salary")
     private Double salary;
-    @OneToMany(mappedBy = "employee",cascade = {CascadeType.ALL})
+    @OneToMany(mappedBy = "employee",cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
     private Set<Address> addresses;
 
     public Integer getId() {
@@ -57,5 +57,16 @@ public class Employee {
 
     public void setAddresses(Set<Address> addresses) {
         this.addresses = addresses;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", empCode=" + empCode +
+                ", salary=" + salary +
+                ", addresses=" + addresses +
+                '}';
     }
 }

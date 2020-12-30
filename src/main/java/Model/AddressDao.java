@@ -1,6 +1,8 @@
 package Model;
 
 
+import util.JPAUtil;
+
 import javax.persistence.EntityManager;
 
 public class AddressDao extends GenericDao<Address, Integer> {

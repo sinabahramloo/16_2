@@ -16,10 +16,10 @@ public class Address {
     private String postalAddress;
     @Column(name = "postalcode")
     private Integer postalCode;
-    @OneToMany(mappedBy = "address")
+    @OneToMany(mappedBy = "address",cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
     private Set<PhoneNumber> phoneNumbers;
-    @ManyToOne(fetch=FetchType.LAZY,cascade = {CascadeType.ALL})
-    @JoinColumn(name = "fk_Employee",nullable = false)
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name = "fk_Employee")
     private Employee employee;
 
     public Integer getId() {

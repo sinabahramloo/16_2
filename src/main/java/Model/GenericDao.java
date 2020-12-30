@@ -3,7 +3,7 @@ package Model;
 import javax.persistence.EntityManager;
 
 public abstract class GenericDao<T,U> {
-    private EntityManager entityManager;
+    protected EntityManager entityManager;
 //    private final Class<T> entityClass;
     public GenericDao(EntityManager entityManager) {
         this.entityManager = entityManager;

@@ -14,7 +14,7 @@ public class PhoneNumber {
     @Column(name = "mobNumber")
     private String mobNumber;
     @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name = "fk_address",nullable = false)
+    @JoinColumn(name = "fk_address")
     private Address address;
 
     public Integer getId() {

@@ -13,4 +13,5 @@ public class PhoneNumberDao extends GenericDao<PhoneNumber, Integer> {
         return PhoneNumber.class;
     }
 
+
 }
